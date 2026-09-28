@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volume Lock Support</title>
+<meta name="description" content="Support and help for Volume Lock, a macOS menu bar app that sets a maximum output volume.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <h1>Volume Lock</h1>
+  <p>Support and help</p>
+  <nav class="site">
+    <a href="index.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</header>
+
+<div class="card contact">
+  <p><strong>Need help?</strong> Email <a href="mailto:customercare@wednesday.is">customercare@wednesday.is</a>.</p>
+  <p class="meta">One person answers this address. Please include your macOS version, the version of Volume Lock from Settings &rsaquo; About, and the output device you were using.</p>
+</div>
+
+<h2>What Volume Lock does</h2>
+
+<p>Volume Lock sets a maximum output volume for your Mac and holds it there. You choose a
+ceiling, switch the lock on, and anything that tries to push the volume above that ceiling is
+pulled straight back down: the keyboard volume keys, Control Center, System Settings, scripts,
+and other apps.</p>
+
+<p>Lowering the volume and muting always work. The cap is a ceiling, never a floor.</p>
+
+<p>macOS has no built-in way to cap output volume. Screen Time has no audio controls, and the
+parental controls do not cover the volume slider. Volume Lock fills that gap, whether you are
+protecting a child's hearing, a shared machine, or your own ears.</p>
+
+<h2>System requirements</h2>
+
+<ul>
+  <li>macOS 13.1 (Ventura) or later.</li>
+  <li>Apple silicon or Intel.</li>
+  <li>No account, no sign-in and no internet connection are needed.</li>
+</ul>
+
+<h2>Where the app lives</h2>
+
+<p>Volume Lock is a menu bar app. It has <strong>no Dock icon and no main window</strong> by
+design. After you install it and open it once, you will find a small lock icon in the menu bar
+at the top right of the screen, alongside Wi-Fi and the clock.</p>
+
+<p>If you cannot see it, the menu bar may be full. Quit another menu bar app, or check whether
+the icon is hidden behind the notch on a laptop. Widening the menu bar space by quitting other
+icons is usually enough.</p>
+
+<h2>How to use it</h2>
+
+<ol>
+  <li><strong>Click the lock icon</strong> in the menu bar. A small panel opens.</li>
+  <li><strong>Drag the "Maximum volume" slider</strong> to the ceiling you want.</li>
+  <li><strong>Switch the lock on</strong> using the toggle at the top right of the panel. The
+    lock icon closes and enforcement starts immediately.</li>
+</ol>
+
+<p>The panel also shows a live <strong>Current volume</strong> readout and names the output
+device the cap currently applies to.</p>
+
+<h3>Watching it work</h3>
+
+<p>With the lock on and a cap set below the current volume, press the volume-up key on the
+keyboard, or drag the slider in Control Center. The volume rises for a fraction of a second and
+then snaps back to the cap. The "Current volume" readout in the panel shows the same thing
+happening. Nothing beeps and nothing pops up, deliberately, so that reverting the volume never
+becomes a game for a child to play.</p>
+
+<h3>Setting a cap of 0%</h3>
+
+<p>A cap of 0% is allowed and mutes all sound while the lock is on. The panel says so under the
+slider when you drag it that far.</p>
+
+<h2>Settings</h2>
+
+<p>Volume Lock has a Settings window with a sidebar: <em>General</em> and <em>About</em> as rows
+on the left, the selected row's content beside them, and <em>Quit Volume Lock</em> pinned at the
+bottom. You can open it in three ways:</p>
+
+<ul>
+  <li><strong>Click the gear button at the bottom right of the panel.</strong> This is the usual
+    way.</li>
+  <li><strong>Hold Option and click the menu bar icon</strong>, then choose <em>Settings…</em>.
+    This works whether or not the panel is open.</li>
+  <li>If the panel is showing a notice about launching at login, the <strong>Settings…</strong>
+    button in that notice opens the same window.</li>
+</ul>
+
+<p>There is no Command-Comma shortcut, because the app has no menu bar of its own.</p>
+
+<h2>Launch at login</h2>
+
+<p>Volume Lock can start automatically when you log in, so the limit is in place before anyone
+uses the Mac. This is a normal login item and it is <strong>yours to control</strong>: open
+Settings &rsaquo; General and use the <em>Start Volume Lock at login</em> switch. Turning it off
+unregisters the login item, and the app will not start by itself after that.</p>
+
+<p>The first time macOS sees the login item it may show a notification saying an app "added
+items that can run in the background", and in some cases it asks you to approve the item in
+System Settings &rsaquo; General &rsaquo; Login Items &amp; Extensions. If approval is needed,
+the General tab shows an <em>Open Login Items</em> button that takes you straight there.</p>
+
+<p>If the app is not running, nothing is enforced. That is the honest trade: the limit applies
+while Volume Lock is running, which is why launching at login is worth leaving on.</p>
+
+<h2>How to quit</h2>
+
+<p><strong>Open Settings — the gear button at the bottom right of the panel — and click
+<em>Quit Volume Lock</em> at the bottom of the sidebar.</strong></p>
+
+<p>You can also <strong>hold Option and click the menu bar icon</strong>, then choose
+<em>Quit Volume Lock</em>. That works without opening Settings.</p>
+
+<p>Command-Q does nothing, and there is no Quit item in a menu at the top of the screen, because
+a menu bar app has no menu bar of its own. Activity Monitor also works if you prefer.</p>
+
+<h2>How to uninstall</h2>
+
+<ol>
+  <li>Quit the app: open Settings with the gear button in the panel and click <em>Quit Volume
+    Lock</em> at the bottom of the sidebar, or hold Option, click the menu bar icon and choose
+    <em>Quit Volume Lock</em>.</li>
+  <li>Open Settings &rsaquo; General first if you want to switch <em>Start Volume Lock at
+    login</em> off, or remove the entry afterwards in System Settings &rsaquo; General &rsaquo;
+    Login Items &amp; Extensions.</li>
+  <li>Drag <strong>Volume Lock</strong> from your Applications folder to the Trash.</li>
+</ol>
+
+<p>Your saved cap and lock state are a few hundred bytes of preferences stored by macOS under
+the app's identifier. They do nothing on their own once the app is gone. If you want them gone
+too, run this in Terminal:</p>
+
+<p><code>defaults delete is.wednesday.VolumeLock</code></p>
+
+<h2>When the cap cannot be enforced</h2>
+
+<p>A volume cap is a safety tool, so here are its limits, stated plainly rather than buried.</p>
+
+<table>
+  <thead>
+    <tr><th>Situation</th><th>What happens</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The app is not running</td>
+      <td>Nothing is enforced. Leave <em>Start Volume Lock at login</em> on so it comes back at
+        the next login.</td>
+    </tr>
+    <tr>
+      <td>Output device has no software volume (some HDMI, USB and optical devices)</td>
+      <td>macOS gives no volume control to set, so the cap cannot be applied. The panel shows a
+        yellow warning naming the device rather than pretending it is protected. Switch to an
+        output that does have volume control, such as the built-in speakers or headphones.</td>
+    </tr>
+    <tr>
+      <td>AirPlay speakers</td>
+      <td>AirPlay output is not visible to the audio system in the way Volume Lock needs, so it
+        is not covered.</td>
+    </tr>
+    <tr>
+      <td>Hardware volume steps</td>
+      <td>Some devices only accept volume in fixed steps, so the volume can settle up to one
+        step above your cap. That is a limit of the hardware, not of the app.</td>
+    </tr>
+    <tr>
+      <td>A tiny raise, within half a percent of the cap</td>
+      <td>Ignored on purpose, so the app does not fight itself over rounding.</td>
+    </tr>
+    <tr>
+      <td>Someone with the Mac's administrator password</td>
+      <td>They can quit or uninstall the app, or switch the login item off in System Settings.
+        No setting inside any app can prevent that. If the person you are limiting has admin
+        access to the Mac, consider giving them a standard account instead.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Common questions</h2>
+
+<h3>The volume will not go above a certain point and I do not know why</h3>
+<p>The lock is probably on. Click the menu bar icon and switch it off, or raise the maximum.</p>
+
+<h3>The panel says my output device has no software volume</h3>
+<p>Some HDMI, USB and optical outputs report no volume control to macOS at all. There is nothing
+for Volume Lock to set. Switch the output to the built-in speakers or headphones in
+System Settings &rsaquo; Sound.</p>
+
+<h3>I plugged in headphones and the volume changed</h3>
+<p>macOS keeps a separate volume per output device. Volume Lock follows the device you are
+actually using and re-applies the cap when you switch, so the ceiling holds on the new device
+too.</p>
+
+<h3>Can I hide the Apple sound icon so it is less tempting?</h3>
+<p>Yes. Open System Settings &rsaquo; Control Center &rsaquo; Sound and choose
+"Don't Show in Menu Bar".</p>
+
+<h3>Does the app use much battery or CPU?</h3>
+<p>No. It waits to be told the volume changed rather than checking repeatedly, so it uses no
+measurable CPU while nothing is happening.</p>
+
+<h3>Where is my data?</h3>
+<p>On your Mac, and nowhere else. See the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>Still stuck?</h2>
+
+<div class="card contact">
+  <p>Email <a href="mailto:customercare@wednesday.is">customercare@wednesday.is</a> and describe
+  what you expected and what happened instead.</p>
+  <p class="meta">Helpful to include: your macOS version (Apple menu &rsaquo; About This Mac),
+  the Volume Lock version from Settings &rsaquo; About, the output device named at the bottom of
+  the panel, and whether the lock switch was on.</p>
+</div>
+
+<footer class="site">
+  <p>Volume Lock for macOS. <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</div>
+</body>
+</html>
